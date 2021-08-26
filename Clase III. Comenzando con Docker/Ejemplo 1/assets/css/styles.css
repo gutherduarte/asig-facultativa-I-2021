@@ -1,0 +1,70 @@
+body {
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 3.675rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 1.675rem;
+}
+
+.hero-container {
+    width: 100%;
+    text-align: center;
+    margin: 1.675rem 0;
+}
+
+.hero img {
+    margin: 0 auto;
+    width: 96px;
+}
+
+.paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 2.675rem;
+}
+.profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    margin-right: .675rem;
+}
+.profile h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    color: #263238;
+    text-transform: uppercase;
+    border-left: 1px solid #cfd8dc;
+    padding-left: .675rem;
+}
+.profile h2 span {
+    font-size: 13px;
+    color: #546e7a;
+    font-weight: normal;
+    text-transform: none;
+}
