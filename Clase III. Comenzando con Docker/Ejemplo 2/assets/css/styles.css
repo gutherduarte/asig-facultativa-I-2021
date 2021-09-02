@@ -12,6 +12,11 @@ main {
     padding-right: 20px;
 }
 
+h1 {
+    text-align: center;
+    color: #2B2C3E;
+}
+
 .formulario {
     padding: 20px;
     box-sizing: border-box;
@@ -110,7 +115,7 @@ main {
     background: #2B2C3E;
 }
 
-.tema-oscuro h2, .tema-oscuro p {
+.tema-oscuro h2, .tema-oscuro p, .tema-oscuro h1 {
     color: white;
 }
 
