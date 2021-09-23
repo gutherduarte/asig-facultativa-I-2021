@@ -11,6 +11,10 @@ namespace AppVenta.Infraestructura.Datos.Contextos {
 
 		string CONNECTION_STRING = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
+		public VentaContexto() {
+			this.Database.EnsureCreated();
+		}
+
 		public DbSet<Producto> Productos { get; set; }
 
 		public DbSet<Venta> Ventas { get; set; }
