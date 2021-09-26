@@ -8,8 +8,12 @@ using AppVenta.Infraestructura.Datos.Configs;
 
 namespace AppVenta.Infraestructura.Datos.Contextos {
 	public class VentaContexto : DbContext {
-
-		string CONNECTION_STRING = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+		
+		string SERVER = Environment.GetEnvironmentVariable("SERVER");
+		string PORT = Environment.GetEnvironmentVariable("PORT");
+		string DATABASE = Environment.GetEnvironmentVariable("DATABASE");
+		string USERNAME = Environment.GetEnvironmentVariable("USERNAME");
+		string PASSWORD = Environment.GetEnvironmentVariable("PASSWORD");
 
 		public VentaContexto() {
 			this.Database.EnsureCreated();
@@ -22,7 +26,7 @@ namespace AppVenta.Infraestructura.Datos.Contextos {
 		public DbSet<VentaDetalle> VentaDetalles { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder options) {
-			options.UseSqlServer(CONNECTION_STRING);
+			options.UseSqlServer($"Server={SERVER},{PORT};Initial Catalog={DATABASE};Persist Security Info=False;User ID={USERNAME};Password={PASSWORD};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 		}
 
 		protected override void OnModelCreating(ModelBuilder builder) {
