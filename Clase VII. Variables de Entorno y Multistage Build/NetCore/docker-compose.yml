@@ -10,6 +10,8 @@ services:
       DATABASE: "AppVentaDb"
       USERNAME: "sa"
       PASSWORD: "Channel321*"
+      INTEGRATED_SECURITY: true
+      TRUST_SERVER_CERTIFICATE: true
     depends_on:
       - database
     links:
