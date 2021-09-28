@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.3"
 services:
   apiventa:
     build: ./
@@ -10,7 +10,7 @@ services:
       DATABASE: "AppVentaDb"
       USERNAME: "sa"
       PASSWORD: "Channel321*"
-      INTEGRATED_SECURITY: true
+      INTEGRATED_SECURITY: false
       TRUST_SERVER_CERTIFICATE: true
     depends_on:
       - database
