@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  miweb1:
+    build: ./
+    ports:
+      - "6000:80"
+  miweb2:
+    build: ./
+    ports:
+      - "6001:80"
+  miweb3:
+    build: ./
+    ports:
+      - "6002:80"
