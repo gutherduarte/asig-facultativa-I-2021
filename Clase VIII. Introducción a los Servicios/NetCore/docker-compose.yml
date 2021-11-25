@@ -16,15 +16,32 @@ services:
       - database
     links:
       - "database"
-  database:
+  sql_desarrollo:
     image: "mcr.microsoft.com/mssql/server"
-    hostname: "sqlserver"
+    hostname: "sqlserver_desarrollo"
     environment:
       SA_PASSWORD: "Channel321*"
       ACCEPT_EULA: "Y"
     volumes:
-      - facturacionData:/var/opt/mssql/data
-
+      - desarrollo_data:/var/opt/mssql/data
+  sql_qa:
+      image: "mcr.microsoft.com/mssql/server"
+      hostname: "sqlserver_qa"
+      environment:
+        SA_PASSWORD: "Channel321*"
+        ACCEPT_EULA: "Y"
+      volumes:
+        - qa_data:/var/opt/mssql/data
+  sql_produccion:
+      image: "mcr.microsoft.com/mssql/server"
+      hostname: "sqlserver_produccion"
+      environment:
+        SA_PASSWORD: "Channel321*"
+        ACCEPT_EULA: "Y"
+      volumes:
+        - facturacionData:/var/opt/mssql/data
 
 volumes:
   facturacionData:
+  qa_data:
+  desarrollo_data:
